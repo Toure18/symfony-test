@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <nav>
+        <div class="section">
+            <a href="{{ path('app_place') }}"><li>Lieux</li></a>
+            <a href="{{ path('customer_index') }}"><li>Clients</li></a>
+            <a href="{{ path('appointment_index') }}"><li>Rendez-vous</li></a>
+        </div>
+
+        {% if app.user %}
+            <div class="mb-3">
+                <button> <a href="{{ path('app_logout') }}">Déconnexion</a></button>
+            </div>
+        {% endif %}
+    </nav>
+
+
+
+{% endblock %}
