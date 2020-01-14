@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <h1> Accueil du Test symfony</h1>
+        <button><a href="{{ path('app_register') }}">Inscription</a></button>
+        <button><a href="{{ path('app_login') }}">Connexion</a></button>
+{% endblock %}
