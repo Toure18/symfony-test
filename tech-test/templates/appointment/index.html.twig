@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Appointment index{% endblock %}
+
+{% block body %}
+    <button class="return"><a href="{{ path('app_home') }}">Retour</a></button>
+    <h1>Rendez-vous</h1>
+
+    <table class="table1">
+        <thead>
+            <tr>
+                <th>N° Rendez-Vous</th>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for appointment in appointments %}
+            <tr>
+                <td>{{ appointment.id }}</td>
+                <td>{{ appointment.date ? appointment.date|date('Y-m-d') : '' }}</td>
+                <td>{{ appointment.date ? appointment.date|date(' H:i') : '' }}</td>
+
+                <td>
+                  <button><a href="{{ path('appointment_show', {'id': appointment.id}) }}">Détail</a></button>
+                    <button> <a href="{{ path('appointment_edit', {'id': appointment.id}) }}">Editer</a></button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+  <button><a href="{{ path('appointment_new') }}">Nouveau Rendez-vous</a></button>
+{% endblock %}
