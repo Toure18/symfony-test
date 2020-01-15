@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <button class="return"><a href="{{ path('app_home') }}">Retour</a></button>
+    <h1>Lieux:</h1>
+
+    <div class="place">
+    {% for place in places %}
+        <ul>
+            <li>
+                {{ place.name }} <br>
+                {{ place.adress }}, <br>
+                {{ place.zipCode }}
+                {{ place.city }}
+            </li>
+        </ul>
+    {% endfor %}
+    </div>
+
+    <h2>Choisir un fichier *csv</h2>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_errors(form) }}
+    <button class="btn">{{ button_label|default('Import') }}</button>
+    {{ form_end(form) }}
+
+{% endblock %}
