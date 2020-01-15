@@ -1,0 +1,55 @@
+body{
+  font-family: Inconsolata;
+  font-style: italic;
+  text-align: center;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  button{
+    background: #625fde;
+    border-color: transparent;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 50%;
+    height: 50px;
+    margin: 5% 5% 5% 5%;
+  }
+  .table{
+    margin-left:40% ;
+    margin-right: 15%;
+  }
+  .table1{
+    margin-right: 15%;
+    margin-left: 35%;
+  }
+  li{
+    color: black;
+    list-style: none;
+  }
+  .section{
+    display:flex;
+    justify-content: space-around;
+  }
+  .place {
+    text-align: left;
+  }
+    h1{
+      text-align: center;
+    }
+  .btn{
+    width: 20%;
+    margin-top: 1%;
+  }
+  .return{
+    width: 5%;
+    margin: 0 100% 0 0;
+    background-color: transparent;
+    a{
+      color: black;
+    }
+
+  }
+
+
+}
